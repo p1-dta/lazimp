@@ -1,5 +1,8 @@
 import collections.abc
 
+# noinspection PyUnresolvedReferences
+from types import ModuleType
+
 
 def lazy_import(
         bare_import: collections.abc.Container | None = None,
