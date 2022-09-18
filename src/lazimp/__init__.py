@@ -48,7 +48,7 @@ def lazy_import(
         if path:
             top_level_import[root].append(import_path)
 
-    sub_import.update(kw_sub_import)
+    sub_import = sub_import | kw_sub_import
 
     import functools
     import importlib
