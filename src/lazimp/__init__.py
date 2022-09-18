@@ -23,6 +23,14 @@ def lazy_import(
                 f'Module has no attribute {name!r}'
             ) from None
 
+        if name in bare_import:
+            try:
+                return importlib.import_module(name)
+            except ModuleNotFoundError as e:
+                raise ModuleNotFoundError(
+                    f'Module has no attribute {name!r}'
+                ) from e
+
         try:
             return importlib.import_module(f'.{name}',
                                            sub_import[name])
