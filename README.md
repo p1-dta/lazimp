@@ -27,9 +27,10 @@ the `__init__.py`:
 # package/__init__.py of a package
 import lazimp
 
+math: lazimp.ModuleType
 heavy_module: lazimp.ModuleType
 
-__getattr__ = lazimp.lazy_import(None, {'heavy_module': 'package'})
+__getattr__ = lazimp.lazy_import({'math'}, {'heavy_module': 'package'})
 ```
 
 Now, when you import the package:
@@ -41,6 +42,9 @@ import package
 print('Before access to heavy_module')
 print(package.heavy_module)
 print('After access to heavy_module')
+print('Before access to math')
+print(package.math)
+print('After access to math')
 ```
 
 And the output:
@@ -52,6 +56,9 @@ Heavy module is loading...
 heavy_module loaded
 <module 'heavy_module' from '...'>
 After access to heavy_module
+Before access to math
+<module 'math' (built-in)>
+After access to math
 ```
 
 Without the lazy loading of `heavy_module.py`, the output would have been:
