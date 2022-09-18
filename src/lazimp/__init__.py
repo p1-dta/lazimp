@@ -20,15 +20,13 @@ def lazy_import(
     def getattr_(name: str):
         if name not in bare_import and name not in sub_import:
             raise AttributeError(
-                f'module {__name__!r} has no attribute {name!r}'
+                f'Module has no attribute {name!r}'
             ) from None
 
         try:
             return importlib.import_module(f'.{name}',
-                                           sub_import.get(name, ''))
-        except ModuleNotFoundError:
-            raise AttributeError(
-                f'module {__name__!r} has no attribute {name!r}'
-            ) from None
+                                           sub_import[name])
+        except ModuleNotFoundError as e:
+            raise AttributeError(f'Module has no attribute {name!r}') from e
 
     return getattr_
