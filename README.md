@@ -12,7 +12,8 @@ First, you may have long loading or memory heavy modules to expose in your
 package api:
 
 ```python
-# heavy_module.py
+# package/heavy_module.py
+print('Heavy module is loading...')
 from time import sleep
 
 sleep(10)
@@ -23,12 +24,12 @@ But instead of importing them directly, you can do a lazy import in
 the `__init__.py`:
 
 ```python
-# __init__.py of a package
+# package/__init__.py of a package
 import lazimp
 
 heavy_module: lazimp.ModuleType
 
-__getattr__ = lazimp.lazy_import({'heavy_module'})
+__getattr__ = lazimp.lazy_import(None, {'heavy_module': 'package'})
 ```
 
 Now, when you import the package:
@@ -46,6 +47,7 @@ And the output:
 
 ```txt
 Before access to heavy_module
+Heavy module is loading...
 (wait 10 sec)
 heavy_module loaded
 <module 'heavy_module' from '...'>
@@ -55,6 +57,7 @@ After access to heavy_module
 Without the lazy loading of `heavy_module.py`, the output would have been:
 
 ```txt
+Heavy module is loading...
 (wait 10 sec)
 heavy_module loaded
 Before access to heavy_module
