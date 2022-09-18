@@ -25,7 +25,7 @@ def lazy_import(
 
         try:
             return importlib.import_module(f'.{name}',
-                                           sub_import.get(name, str))
+                                           sub_import.get(name, ''))
         except ModuleNotFoundError:
             raise AttributeError(
                 f'module {__name__!r} has no attribute {name!r}'
