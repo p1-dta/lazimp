@@ -2,17 +2,17 @@
 
 You can find examples of how to use the library here.
 
-## First case: Project description example
+## Project description
 
-This example is just the example from project description you can find here:
+This example is the example from project description you can find here:
 [LazImp README.md](https://github.com/Vikka/lazimp#readme).
 
-Project
-folder: [lazimp/examples/first_case](https://github.com/Vikka/lazimp/examples/first_case)
+Example
+folder: [lazimp/examples/first_case](https://github.com/Vikka/lazimp/examples/basic)
 
-In this example, only the `heavy_module.py` is loaded, only when you access the
+In this example, the `heavy_module.py` is loaded only when you access the
 package attribute named `heavy_module`. Before that, any code written in
-`heavy_module.py` is not executed.
+`heavy_module.py` is not executed. Same for the `math` module.
 
 ## Aliases lazy loading
 
