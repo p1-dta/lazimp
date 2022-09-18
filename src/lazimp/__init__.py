@@ -44,7 +44,7 @@ def lazy_import(
     imports = {name for name in bare_imports if len(name.split('.')) == 1}
     top_level_import = collections.defaultdict(list)
     for import_path in bare_imports:
-        root, *path = (import_path.split('.'))
+        root, *path = import_path.split('.')
         if path:
             top_level_import[root].append(import_path)
 
