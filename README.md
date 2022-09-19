@@ -6,6 +6,9 @@ only **when** the user use it. From dynamic import to "I only need this
 function, not the whole framework", the start-up time is speed-up and delayed
 over the execution of the software.
 
+Using LazImp, you will reduce the memory usage and the start-up time of your
+software.
+
 ## Example
 
 First, you may have long loading or memory heavy modules to expose in your
@@ -60,6 +63,7 @@ heavy_module loaded
 <module 'heavy_module' from '...'>
 After access to heavy_module
 Before access to math
+# math loaded
 <module 'math' (built-in)>
 After access to math
 ```
@@ -69,8 +73,11 @@ Without the lazy loading of `heavy_module.py`, the output would have been:
 ```txt
 Heavy module is loading...
 (wait 10 sec)
-heavy_module loaded
+heavy_module loaded  # math loaded too
 Before access to heavy_module
 <module 'heavy_module' from '...'>
 After access to heavy_module
+Before access to math
+<module 'math' (built-in)>
+After access to math
 ```
