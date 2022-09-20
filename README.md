@@ -84,7 +84,7 @@ After access to math
 
 ## Why this name: LazImp?
 
-LazImp is a portmanteau of `lazy` and `imp`.
+`lazimp` is a portmanteau of `lazy` and `imp`.
 
 `imp` was the name of the module `importlib` before python 3.4 and its
 deprecation: [What's new in Python 3.4: Deprecations in the Python API](https://docs.python.org/3/whatsnew/3.4.html#deprecations-in-the-python-api)
