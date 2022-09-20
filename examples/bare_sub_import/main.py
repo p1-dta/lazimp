@@ -1,9 +1,9 @@
 import package
 
 print('Before access to package_2')
-print('load of bare_sub_module and bare_sub_module_2: ', package.package_2)
+print('load of bare_sub_module, bare_sub_module_2 and bare_sub_module_3: ', package.package_2)
 print('After access to package_2')
-print('package_2.bare_sub_module: ', package.package_2.bare_sub_module)
+print('package_2.bare_sub_module_1: ', package.package_2.bare_sub_module_1)
 print('package_2.bare_sub_module_2: ',
       package.package_2.bare_sub_module_2)
 print(
