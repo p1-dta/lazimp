@@ -89,5 +89,7 @@ After access to math
 `imp` was the name of the module `importlib` before python 3.4 and its
 deprecation: [What's new in Python 3.4: Deprecations in the Python API](https://docs.python.org/3/whatsnew/3.4.html#deprecations-in-the-python-api)
 
-The `imp` part was kept as a reference to the original module and because an
-imp with sunglasses and cocktail is cool 😎.
+The name could have been `lazy_import` but the `imp` part was preferred as a
+reference to the original module and because an
+imp with sunglasses and cocktail is cool 😎, and `lazy` shorten because it
+sounded better.
