@@ -8,7 +8,7 @@ version = "0.0.5"
 authors = [
     { name = "Dorian Turba", email = "dturba.pro@protonmail.com" },
 ]
-description = "Lazy import of packages and modules"
+description = "LazImp, the package for lazy import of packages, modules and symboles"
 readme = "README.md"
 requires-python = ">=3.10"
 classifiers = [
