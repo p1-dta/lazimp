@@ -1,4 +1,4 @@
-# LazImp
+# LazImp, The "don't wait for it..." package
 
 LazImp is a package that allows lazy loading of python modules, packages and
 symboles for python 3.10+. This package allows you to load modules and packages
