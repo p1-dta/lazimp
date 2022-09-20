@@ -39,5 +39,9 @@ use `package.package_2`.
 This example shows the difference between an import of `keras` and `aiohttp`
 and a lazy import, with and without usage.
 
+Example
+folder: [lazimp/examples/benchmark](https://github.com/Vikka/lazimp/examples/benchmark)
+
+
 With `lazimp`, no overhead is felt, and the import time only happen when you
 use `keras` and `aiohttp` modules.
