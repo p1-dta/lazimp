@@ -22,3 +22,22 @@ Example
 folder: [lazimp/examples/aliases](https://github.com/Vikka/lazimp/examples/aliasses)
 
 In this example, the `alias_module.py` is loaded though the `am` alias.
+
+## Bare sub import
+
+This example shows how to use bare import to import packages and submodules at
+once.
+
+Example
+folder: [lazimp/examples/bare_sub_import](https://github.com/Vikka/lazimp/examples/bare_sub_import)
+
+In this example, `package_2.bare_sub_module_<1, 2, 3>` are loaded when you
+use `package.package_2`.
+
+## Benchmark
+
+This example shows the difference between an import of `keras` and `aiohttp`
+and a lazy import, with and without usage.
+
+With `lazimp`, no overhead is felt, and the import time only happen when you
+use `keras` and `aiohttp` modules.
