@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "lazimp"
 version = "0.0.5"
 authors = [
-    { name = "Dorian Turba", email = "dturba.pro@protonmail.com" },
+    { name = "Dorian Turba", email = "lazimp.pip.drd8f@8shield.net" },
 ]
 description = "LazImp, the package for lazy import of packages, modules and symboles"
 readme = "README.md"
@@ -21,5 +21,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/Vikka/lazimport"
-"Bug Tracker" = "https://github.com/Vikka/lazimport/issues"
+"Homepage" = "https://github.com/dorianturba/lazimport"
+"Bug Tracker" = "https://github.com/dorianturba/lazimport/issues"
